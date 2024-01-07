@@ -111,6 +111,11 @@
             </li>
               </ul>
             </li>
+            
+            <li class="nav-item" data-level="1"><a href="#githubpage" class="nav-link">Github의page와 연동.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
@@ -172,7 +177,7 @@ INFO    -  [21:51:00] Serving on http://127.0.0.1:8000/``
 <pre><code class="language-bash">mkdocs build
 </code></pre>
 <p>그 결과는 다음과 같음.</p>
-<pre><code>test
+<pre><code>ce
 ├── docs
 │   └── index.md
 ├── mkdocs.yml
@@ -205,7 +210,37 @@ INFO    -  [21:51:00] Serving on http://127.0.0.1:8000/``
     └── sitemap.xml.gz
 
 8 directories, 23 files
-</code></pre></div>
+</code></pre>
+<hr />
+<hr />
+<h1 id="githubpage">Github의page와 연동.</h1>
+<p>mkdocs의 문서 프로젝트의 root (위의 예에선 <code>ce</code>) 에서 다음의 명령어로 github의 repository와 연결.</p>
+<ul>
+<li>반드시 연결될 github의 remote repository는 public이여야함.</li>
+</ul>
+<pre><code class="language-bash">git init
+git add .
+git commit -m &quot;first commit&quot;
+git remote add origin &lt;github의 repository 주소&gt;
+git branch -M main
+git push -u origin main
+</code></pre>
+<p>이후, 다음 명령어로 <code>gh-deploy</code> 브랜치로 생성된 문서 사이트를 push.</p>
+<pre><code class="language-bash">mkdocs gh-deploy
+</code></pre>
+<p>이후 github의 대상 remote repository에서 <code>settings</code> 에서</p>
+<p><code>page</code>를 선택하고, <code>Build and deployment</code> 에서 <code>gh-deploy</code> 브랜치에서 서비스 되도록<br />
+아래 그림과 같이 설정을 바꿔줌.</p>
+<p><img alt="" src="../imgs/github_page_gh_deploy.png" /></p>
+<ul>
+<li><code>dsaint31xg</code>가 github의 id임.</li>
+<li><code>ce</code>가 remote repostory의 이름.</li>
+<li>이 경우, <code>git@github.com:dsaint31xg/ce.git</code>이 <code>&lt;github의 repository 주소&gt;</code> 임(ssh사용의 경우)</li>
+</ul>
+<p>이후 <code>&lt;github_user_id&gt;.github.io/&lt;remote repository의 이름&gt;</code> URL에서 서비스 됨.</p>
+<ul>
+<li>이 경우, <code>dsaint31xg.github.io/ce</code> 의 URL에서 서비스 됨.</li>
+</ul></div>
             </div>
         </div>
 
