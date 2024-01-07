@@ -116,6 +116,11 @@
               <ul class="nav flex-column">
               </ul>
             </li>
+            
+            <li class="nav-item" data-level="1"><a href="#urls" class="nav-link">함께 보면 좋은 URLs</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
         </ul>
     </div>
 </div></div>
@@ -123,6 +128,7 @@
 
 <h1 id="mkdocs">MkDocs 에 대해서.</h1>
 <p><a href="https://jekyllrb.com/docs/">Jekyll</a>, <a href="https://www.sphinx-doc.org/en/master/">shinx</a>, <a href="https://about.readthedocs.com/?ref=readthedocs.org">read docs</a> 등과 함께 대표적인 <strong><em>static site generator</em></strong> (정적 사이트 생성기) 로 정적인 웹문서 위주의 사이트를 만드는데 적합한 tool임.</p>
+<hr />
 <h2 id="_1">장점.</h2>
 <p><code>Python</code>과 <code>Markdown</code>에 익숙한 사용자의 경우, 매우 간단하게 정적인 문서로 구성된 사이트를 생성할 수 있음.</p>
 <p><code>github.com</code>의 페이지 <code>github.io</code>와 연동도 지원함 (기본으로 제공되는 Jekyll 만큼 간단함.)</p>
@@ -249,13 +255,22 @@ INFO    -  Your documentation should be available shortly.
 <p>이후 github의 대상 remote repository에서 <code>settings</code> 에서</p>
 <p><code>Pages</code>를 선택하고, <code>Build and deployment</code> 에서 <code>gh-pages</code> 브랜치에서 서비스 되도록<br />
 아래 그림과 같이 설정을 바꿔줌.</p>
-<p><img alt="" src="../imgs/github_page_gh_deploy.png" />
-* <code>dsaint31xg</code>가 github의 id임.
-* <code>ce</code>가 remote repostory의 이름.
-* 이 경우, <code>git@github.com:dsaint31xg/ce.git</code>이 <code>&lt;github의 repository 주소&gt;</code> 임(ssh사용의 경우)</p>
+<p><img alt="" src="../imgs/github_page_gh_deploy.png" /></p>
+<ul>
+<li><code>dsaint31xg</code>가 github의 id임.</li>
+<li><code>ce</code>가 remote repostory의 이름.</li>
+<li>이 경우, <code>git@github.com:dsaint31xg/ce.git</code>이 <code>&lt;github의 repository 주소&gt;</code> 임(ssh사용의 경우)</li>
+</ul>
 <p>이후 <code>&lt;github_user_id&gt;.github.io/&lt;remote repository의 이름&gt;</code> URL에서 서비스 됨.</p>
 <ul>
 <li>이 경우, <code>dsaint31xg.github.io/ce</code> 의 URL에서 서비스 됨.</li>
+</ul>
+<hr />
+<hr />
+<h1 id="urls">함께 보면 좋은 URLs</h1>
+<ul>
+<li><a href="https://ds31x.tistory.com/153">ssh 키 만들기</a></li>
+<li><a href="https://ds31x.tistory.com/154">ssh 키 github 등록하기</a></li>
 </ul></div>
             </div>
         </div>
