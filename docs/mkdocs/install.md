@@ -96,7 +96,7 @@ mkdocs build
 그 결과는 다음과 같음.
 
 ```
-test
+ce
 ├── docs
 │   └── index.md
 ├── mkdocs.yml
@@ -130,3 +130,48 @@ test
 
 8 directories, 23 files
 ```
+
+---
+ 
+---
+
+# Github의page와 연동.
+
+mkdocs의 문서 프로젝트의 root (위의 예에선 `ce`) 에서 다음의 명령어로 github의 repository와 연결.
+
+* 반드시 연결될 github의 remote repository는 public이여야함.
+
+
+```bash
+git init
+git add .
+git commit -m "first commit"
+git remote add origin <github의 repository 주소>
+git branch -M main
+git push -u origin main
+```
+
+이후, 다음 명령어로 `gh-deploy` 브랜치로 생성된 문서 사이트를 push.
+
+```bash
+mkdocs gh-deploy
+```
+
+이후 github의 대상 remote repository에서 `settings` 에서
+
+`Pages`를 선택하고, `Build and deployment` 에서 `gh-pages` 브랜치에서 서비스 되도록  
+아래 그림과 같이 설정을 바꿔줌.
+
+![](./imgs/github_page_gh_deploy.png)
+* `dsaint31xg`가 github의 id임.
+* `ce`가 remote repostory의 이름.
+* 이 경우, `git@github.com:dsaint31xg/ce.git`이 `<github의 repository 주소>` 임(ssh사용의 경우)
+
+
+이후 `<github_user_id>.github.io/<remote repository의 이름>` URL에서 서비스 됨.
+
+* 이 경우, `dsaint31xg.github.io/ce` 의 URL에서 서비스 됨.
+
+
+
+

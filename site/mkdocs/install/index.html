@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Install - about Computer</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">about Computer</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">mkdocs <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">Install</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../.." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#mkdocs" class="nav-link">MkDocs 에 대해서.</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#_1" class="nav-link">장점.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#jekyll" class="nav-link">Jekyll 과의 비교.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#install-mkdocs" class="nav-link">Install MkDocs</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#conda-mkdocs" class="nav-link">conda 이용한 mkdocs 설치</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#mkdocs_1" class="nav-link">mkdocs 프로젝트 생성.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#_2" class="nav-link">동작 확인.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#build" class="nav-link">문서 사이트 build하기.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-level="1"><a href="#githubpage" class="nav-link">Github의page와 연동.</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="mkdocs">MkDocs 에 대해서.</h1>
+<p><a href="https://jekyllrb.com/docs/">Jekyll</a>, <a href="https://www.sphinx-doc.org/en/master/">shinx</a>, <a href="https://about.readthedocs.com/?ref=readthedocs.org">read docs</a> 등과 함께 대표적인 <strong><em>static site generator</em></strong> (정적 사이트 생성기) 로 정적인 웹문서 위주의 사이트를 만드는데 적합한 tool임.</p>
+<h2 id="_1">장점.</h2>
+<p><code>Python</code>과 <code>Markdown</code>에 익숙한 사용자의 경우, 매우 간단하게 정적인 문서로 구성된 사이트를 생성할 수 있음.</p>
+<p><code>github.com</code>의 페이지 <code>github.io</code>와 연동도 지원함 (기본으로 제공되는 Jekyll 만큼 간단함.)</p>
+<h2 id="jekyll">Jekyll 과의 비교.</h2>
+<p><code>Ruby</code>로 작성된 Jekyll에 비해 보다 쉬운 환경설정을 자랑하는 MkDocs 임.</p>
+<p>단, Jekyll은 개인 블로그나 웹사이트에 보다 적합하며 플러그인 등에서 보다 지원이 큰 편임. 
+때문에 MkDocs에 비해 높은 자유도의 옵션을 제공하지만 보다 높은 학습량을 요구함.</p>
+<ul>
+<li><a href="https://www.mkdocs.org/">Official Site</a></li>
+</ul>
+<hr />
+<hr />
+<h1 id="install-mkdocs">Install MkDocs</h1>
+<p><code>conda</code> 를 이용한 설치를 가정함.</p>
+<h2 id="conda-mkdocs">conda 이용한 <code>mkdocs</code> 설치</h2>
+<p>terminal에서 다음의 명령어를 입력하면,
+<code>conda</code>를 이용하여 <code>mkdocs</code>라는 가상환경을 만들고, 여기에 <code>mkdocs</code>를 설치함.</p>
+<pre><code class="language-bash">conda create -n mkdocs -c conda-forge mkdocs
+</code></pre>
+<hr />
+<h2 id="mkdocs_1">mkdocs 프로젝트 생성.</h2>
+<p><code>new</code> 를 이용하여 mkdocs로 문서 사이트를 관리하기 위한 mkdocs 프로젝트 경로를 생성함.</p>
+<p>다음은 <code>ce</code>라는 directory가 생성되고 해당 디렉토리가 mkdocs로 문서들을 만들고 관리하는 작업 프로젝트의 root directory가 됨.</p>
+<pre><code class="language-bash">mkdocs new ce
+</code></pre>
+<p>위 명령어 결과로 다음의 direcgtory 구조의 <code>ce</code>가 생성됨.</p>
+<pre><code>ce
+├── docs
+│   └── index.md
+└── mkdocs.yml
+</code></pre>
+<hr />
+<h2 id="_2">동작 확인.</h2>
+<p>우선 작업 디렉토리 <code>ce</code>로 들어가서 정상 설치되었는지를 다음 명령어로 확인.</p>
+<pre><code class="language-bash">cd ce
+mkdocs serve
+</code></pre>
+<p>다음과 같은 메시지가 나오고 로컬 서버에서 mkdocs로 만들어진 문서 사이트가 서비스 됨.</p>
+<pre><code>❯ mkdocs serve
+INFO    -  Building documentation...
+INFO    -  Cleaning site directory
+INFO    -  Documentation built in 0.03 seconds
+INFO    -  [21:51:00] Watching paths for changes: 'docs', 'mkdocs.yml'
+INFO    -  [21:51:00] Serving on http://127.0.0.1:8000/``
+</code></pre>
+<p>이후, <code>http://127.0.0.1:8000</code> URL을 웹브라우저로 확인 가능함.</p>
+<p><img alt="" src="../imgs/serve_result.png" /></p>
+<hr />
+<h2 id="build">문서 사이트 build하기.</h2>
+<p>다음의 명령어를 수행할 경우 문서사이트의 파일들(html 등등)이 
+<code>site</code> 라는 이름의 sub-directory에 생성됨.</p>
+<pre><code class="language-bash">mkdocs build
+</code></pre>
+<p>그 결과는 다음과 같음.</p>
+<pre><code>ce
+├── docs
+│   └── index.md
+├── mkdocs.yml
+└── site
+    ├── 404.html
+    ├── css
+    │   ├── base.css
+    │   ├── bootstrap.min.css
+    │   └── font-awesome.min.css
+    ├── fonts
+    │   ├── fontawesome-webfont.eot
+    │   ├── fontawesome-webfont.svg
+    │   ├── fontawesome-webfont.ttf
+    │   ├── fontawesome-webfont.woff
+    │   └── fontawesome-webfont.woff2
+    ├── img
+    │   ├── favicon.ico
+    │   └── grid.png
+    ├── index.html
+    ├── js
+    │   ├── base.js
+    │   ├── bootstrap.min.js
+    │   └── jquery-3.6.0.min.js
+    ├── search
+    │   ├── lunr.js
+    │   ├── main.js
+    │   ├── search_index.json
+    │   └── worker.js
+    ├── sitemap.xml
+    └── sitemap.xml.gz
+
+8 directories, 23 files
+</code></pre>
+<hr />
+<hr />
+<h1 id="githubpage">Github의page와 연동.</h1>
+<p>mkdocs의 문서 프로젝트의 root (위의 예에선 <code>ce</code>) 에서 다음의 명령어로 github의 repository와 연결.</p>
+<ul>
+<li>반드시 연결될 github의 remote repository는 public이여야함.</li>
+</ul>
+<pre><code class="language-bash">git init
+git add .
+git commit -m &quot;first commit&quot;
+git remote add origin &lt;github의 repository 주소&gt;
+git branch -M main
+git push -u origin main
+</code></pre>
+<p>이후, 다음 명령어로 <code>gh-deploy</code> 브랜치로 생성된 문서 사이트를 push.</p>
+<pre><code class="language-bash">mkdocs gh-deploy
+</code></pre>
+<p>이후 github의 대상 remote repository에서 <code>settings</code> 에서</p>
+<p><code>page</code>를 선택하고, <code>Build and deployment</code> 에서 <code>gh-deploy</code> 브랜치에서 서비스 되도록<br />
+아래 그림과 같이 설정을 바꿔줌.</p>
+<p><img alt="" src="../imgs/github_page_gh_deploy.png" /></p>
+<ul>
+<li><code>dsaint31xg</code>가 github의 id임.</li>
+<li><code>ce</code>가 remote repostory의 이름.</li>
+<li>이 경우, <code>git@github.com:dsaint31xg/ce.git</code>이 <code>&lt;github의 repository 주소&gt;</code> 임(ssh사용의 경우)</li>
+</ul>
+<p>이후 <code>&lt;github_user_id&gt;.github.io/&lt;remote repository의 이름&gt;</code> URL에서 서비스 됨.</p>
+<ul>
+<li>이 경우, <code>dsaint31xg.github.io/ce</code> 의 URL에서 서비스 됨.</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/jquery-3.6.0.min.js"></script>
+        <script src="../../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
