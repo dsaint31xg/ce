@@ -1,1 +1,7 @@
-site_name: My Docs
+site_name: about Computer
+
+
+nav:
+  - Home: index.md
+  - mkdocs:
+    - Install: "mkdocs/install.md"
