@@ -157,6 +157,28 @@ git push -u origin main
 mkdocs gh-deploy
 ```
 
+일반적으로 ssh 키로 해당 remote repository에 접근 가능한지 확인하기 위해 중간에 ssh키에 대한 암호를 물어봄.
+
+결과는 다음과 같음
+
+```bash
+INFO    -  Cleaning site directory
+INFO    -  Building documentation to directory: /Users/dsaint31/Desktop/lectures/dsaint31xg/ce/site
+INFO    -  Documentation built in 0.04 seconds
+INFO    -  Copying '/Users/dsaint31/Desktop/lectures/dsaint31xg/ce/site' to 'gh-pages' branch and pushing to GitHub.
+Enter passphrase for key '/Users/dsaint31/.ssh/id_rsa':
+Enumerating objects: 17, done.
+Counting objects: 100% (17/17), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 792 bytes | 792.00 KiB/s, done.
+Total 9 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 6 local objects.
+To github.com-dsaint31xg:dsaint31xg/ce.git
+   4a6aacd..8aac8de  gh-pages -> gh-pages
+INFO    -  Your documentation should be available shortly.
+```
+
 이후 github의 대상 remote repository에서 `settings` 에서
 
 `Pages`를 선택하고, `Build and deployment` 에서 `gh-pages` 브랜치에서 서비스 되도록  

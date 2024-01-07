@@ -229,14 +229,12 @@ git push -u origin main
 <pre><code class="language-bash">mkdocs gh-deploy
 </code></pre>
 <p>이후 github의 대상 remote repository에서 <code>settings</code> 에서</p>
-<p><code>page</code>를 선택하고, <code>Build and deployment</code> 에서 <code>gh-deploy</code> 브랜치에서 서비스 되도록<br />
+<p><code>Pages</code>를 선택하고, <code>Build and deployment</code> 에서 <code>gh-pages</code> 브랜치에서 서비스 되도록<br />
 아래 그림과 같이 설정을 바꿔줌.</p>
-<p><img alt="" src="../imgs/github_page_gh_deploy.png" /></p>
-<ul>
-<li><code>dsaint31xg</code>가 github의 id임.</li>
-<li><code>ce</code>가 remote repostory의 이름.</li>
-<li>이 경우, <code>git@github.com:dsaint31xg/ce.git</code>이 <code>&lt;github의 repository 주소&gt;</code> 임(ssh사용의 경우)</li>
-</ul>
+<p><img alt="" src="../imgs/github_page_gh_deploy.png" />
+* <code>dsaint31xg</code>가 github의 id임.
+* <code>ce</code>가 remote repostory의 이름.
+* 이 경우, <code>git@github.com:dsaint31xg/ce.git</code>이 <code>&lt;github의 repository 주소&gt;</code> 임(ssh사용의 경우)</p>
 <p>이후 <code>&lt;github_user_id&gt;.github.io/&lt;remote repository의 이름&gt;</code> URL에서 서비스 됨.</p>
 <ul>
 <li>이 경우, <code>dsaint31xg.github.io/ce</code> 의 URL에서 서비스 됨.</li>
